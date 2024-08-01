@@ -4,7 +4,7 @@ import websockets
 from vars import symbol_subscriptions, clients
 
 
-async def register(websocket, path):
+async def register(websocket):
     try:
         message = await websocket.recv()
         params = json.loads(message)
